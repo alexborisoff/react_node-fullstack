@@ -1,11 +1,39 @@
-## Fullstack project
+# React Fullstack App
 
-### Client
+A fullstack web application with a **React** frontend and a **Node.js (Express)** backend.  
+The project follows a classic `client / server` architecture.
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
 - React
+- React Router
+- Axios
+- JavaScript
+- CSS 
 
-### Server
-- Node.js + Express
+### Backend
+- Node.js
+- Express
+- Sequelize
+- MySQL
 
-### Run
-cd server && npm install
-cd client && npm install
+---
+
+## 📂 Project Structure
+
+```text
+react-fullstack/
+├── client/        # Frontend (React)
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── server/        # Backend (Node.js + Express)
+│   ├── routes/
+│   ├── models/
+│   ├── config/
+│   └── package.json
+├── .gitignore
+└── README.md
