@@ -14,11 +14,8 @@ label {
     margin-left: 20px;
 }
 
-h3 {
-    padding-bottom: 40px;
-    margin: 10px;
-    color: #707072;
-    font-size: 24px;
+textarea {
+    resize: none;
 }
 
 a {
@@ -37,7 +34,6 @@ button:hover {
     justify-content: center;
     flex-wrap: wrap;
     gap: 64px;
-
 }
 
 .shoe {
@@ -83,18 +79,17 @@ button:hover {
     text-decoration: none;
     color: #d87d56;
     gap: 20px;
-    margin: 40px;
+    margin: 30px;
 }
 
 .navbar a {
-    color:#f69a73;
+    color: #f69a73;
     font-weight: 600;
 }
 
 /* Add Form */
 
 .add_shoes_page {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,10 +98,11 @@ button:hover {
 
 .add_form {
     position: relative;
-    min-width: 400px;
-    margin: 0 auto;
+    min-width: 500px;
+    margin: 30px auto;
     background: white;
     border-radius: 30px;
+    
 }
 
 .add_form_left_decor,
@@ -174,7 +170,16 @@ button:hover {
     color: black;
 }
 
-.add_form_inner input {
+.add_form_inner h3 {
+    padding-bottom: 40px;
+    margin: 10px;
+    color: #707072;
+    font-size: 24px;
+    text-align: center;
+}
+
+.add_form_inner input,
+textarea {
     display: block;
     width: 100%;
     padding: 0px 20px;
@@ -212,8 +217,8 @@ button:hover {
 }
 
 .shoe_item_photo {
-   height: 35rem;
-   width: 35rem;
+    height: 35rem;
+    width: 35rem;
 }
 
 .shoe_item_info {
