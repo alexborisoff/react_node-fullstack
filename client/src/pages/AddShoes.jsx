@@ -1,8 +1,18 @@
 import axios from 'axios';
-import { Formik, Form, Field, ErrorMessage, FieldArray } from 'formik';
+import {
+    Formik,
+    Form,
+    Field,
+    ErrorMessage,
+} from 'formik';
+import { useEffect } from 'react';
 import * as Yup from 'yup';
 
 export const AddShoes = () => {
+    useEffect(() => {
+        document.title = 'Add New Shoes';
+    });
+
     const initialValues = {
         photo: '',
         type: '',
@@ -95,10 +105,7 @@ export const AddShoes = () => {
                             placeholder="Once Upon A Time..."
                         />
                         <label>sizes</label>
-                        <ErrorMessage
-                            name="sizes"
-                            component="span"
-                        />
+                        <ErrorMessage name="sizes" component="span" />
                         <Field
                             id=""
                             name="sizes"
@@ -114,7 +121,6 @@ export const AddShoes = () => {
                             name="article"
                             placeholder="ex. IQ402-22"
                         />
-
 
                         <button type="submit">add</button>
                     </div>

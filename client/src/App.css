@@ -102,7 +102,6 @@ button:hover {
     margin: 30px auto;
     background: white;
     border-radius: 30px;
-    
 }
 
 .add_form_left_decor,
@@ -222,7 +221,8 @@ textarea {
 }
 
 .shoe_item_info {
-    margin-bottom: 480px;
+    position: absolute;
+    top: 30%;
     margin-left: 40px;
 }
 
@@ -234,4 +234,26 @@ textarea {
 .shoe_item_info_price {
     font-size: 20px;
     font-weight: 500;
+}
+
+.shoe_item_info_additional {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 24px;
+}
+
+.shoe_item_info_additional_description {
+    text-align: justify;
+    max-width: 20vw;
+}
+
+.shoe_item_info_additional_article button {
+    padding: 8px;
+    font-weight: 600;
+    color: white;
+    background-color: #f69a73;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
 }

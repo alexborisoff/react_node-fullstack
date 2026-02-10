@@ -7,13 +7,14 @@ export const Home = () => {
     const [listOfShoes, setListOfShoes] = useState([]);
 
     useEffect(() => {
+        document.title = 'Home Page';
         axios.get('http://localhost:3001/shoes').then((response) => {
             setListOfShoes(response.data);
         });
     }, []);
     return (
         <main className="App">
-            <ShoesList shoes={listOfShoes}/>
+            <ShoesList shoes={listOfShoes} />
         </main>
     );
 };
