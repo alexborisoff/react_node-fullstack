@@ -11,9 +11,10 @@ export const Shoe = () => {
         axios
             .get(`http://localhost:3001/shoes/byId/${id}`)
             .then((response) => {
+                console.log('Wow');
                 setShoeItem(response.data);
             });
-    });
+    }, []);
 
     return (
         <main className="shoe_item">
@@ -37,7 +38,7 @@ export const Shoe = () => {
                         {shoeItem.description}
                     </p>
                     <p className="shoe_item_info_additional_article">
-                        Available sizes:{' '}
+                        Available sizes:
                         <button>{shoeItem.sizes}</button>
                     </p>
                     <p>

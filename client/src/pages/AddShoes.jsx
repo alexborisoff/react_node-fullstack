@@ -1,17 +1,12 @@
 import axios from 'axios';
-import {
-    Formik,
-    Form,
-    Field,
-    ErrorMessage,
-} from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useEffect } from 'react';
 import * as Yup from 'yup';
 
 export const AddShoes = () => {
     useEffect(() => {
         document.title = 'Add New Shoes';
-    });
+    }, []);
 
     const initialValues = {
         photo: '',
@@ -23,7 +18,7 @@ export const AddShoes = () => {
         article: '',
     };
 
-    const validatationSchema = Yup.object().shape({
+    const validationSchema = Yup.object().shape({
         photo: Yup.string().required('the value must be a link'),
         type: Yup.string().required(),
         title: Yup.string().required(),
@@ -44,7 +39,7 @@ export const AddShoes = () => {
         axios
             .post('http://localhost:3001/shoes', data)
             .then((response) => {
-                console.log('Data was added', response);
+                alert('Data was added', response);
             });
     };
 
@@ -53,7 +48,7 @@ export const AddShoes = () => {
             <Formik
                 initialValues={initialValues}
                 onSubmit={handleFormSubmit}
-                validationSchema={validatationSchema}
+                validationSchema={validationSchema}
             >
                 <Form className="add_form ">
                     <div className="add_form_left_decor"></div>
@@ -67,7 +62,7 @@ export const AddShoes = () => {
                             id=""
                             name="photo"
                             placeholder="https://webaddress.com/link_photo"
-                            autocomplete="off"
+                            autoComplete="off"
                         />
                         <label>type</label>
                         <ErrorMessage name="type" component="span" />
@@ -75,7 +70,7 @@ export const AddShoes = () => {
                             id=""
                             name="type"
                             placeholder="ex. Nike Air Force 07"
-                            autocomplete="off"
+                            autoComplete="off"
                         />
                         <label>title</label>
                         <ErrorMessage name="title" component="span" />
@@ -83,7 +78,7 @@ export const AddShoes = () => {
                             id=""
                             name="title"
                             placeholder="ex. Men's Running Shoes"
-                            autocomplete="off"
+                            autoComplete="off"
                         />
                         <label>price</label>
                         <ErrorMessage name="price" component="span" />
@@ -91,7 +86,7 @@ export const AddShoes = () => {
                             id=""
                             name="price"
                             placeholder="200$"
-                            autocomplete="off"
+                            autoComplete="off"
                         />
                         <label>description</label>
                         <ErrorMessage
