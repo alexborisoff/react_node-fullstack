@@ -9,6 +9,8 @@ const db = require('./models');
 
 const shoeRouter = require('./routes/Shoes');
 app.use('/shoes', shoeRouter);
+const userRouter = require('./routes/Users');
+app.use('/auth', userRouter);
 
 db.sequelize.sync().then(() => {
     app.listen(3001, () => {

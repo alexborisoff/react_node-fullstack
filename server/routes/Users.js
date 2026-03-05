@@ -25,9 +25,9 @@ router.post('/login', async (request, response) => {
 
     bcrypt.compare(password, user.password).then((match) => {
         if (!match)
-            response.json({ error: 'Wrond Username and password' });
+            response.json({ error: 'Wrong Username and password' });
 
-        response.json("You log")
+        response.json('You log in now, great job');
     });
 });
 
